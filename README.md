@@ -15,4 +15,4 @@ A light-weight web server written in Go with the following features:
 - Non-BASH scripts will automatically be run, so there is no need to create a `.service` config for Systemd; just drop in the main folder
 - Cooperate with [standalone](https://eff-certbot.readthedocs.io/en/stable/using.html#standalone) support for Certbot/Letsencrypt
 - Support Apache settings (including `RewriteEngine`) common in an `.htaccess` file or inside the server config (both supported)
-- Simlifies settings by bringing most common defaults
+- Simplifies settings by bringing most common defaults
