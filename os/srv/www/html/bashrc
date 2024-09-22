@@ -1,0 +1,13 @@
+# settings.bash
+export DB_HOST="localhost"
+export DB_USER="username"
+export DB_PASS="password"
+
+# Function to connect to DB
+db_connect() {
+    # Use your preferred DB tool here, e.g., sqlite3, mysql, etc.
+    mysql -h $DB_HOST -u $DB_USER -p$DB_PASS database_name
+}
+
+# Source this in your scripts
+source /path/to/settings.bash

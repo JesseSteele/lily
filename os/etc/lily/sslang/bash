@@ -1,0 +1,9 @@
+func execScript(scriptPath string, env map[string]string) ([]byte, error) {
+    cmd := exec.Command("/bin/bash", scriptPath)
+    cmd.Env = []string{}
+    for k, v := range env {
+        cmd.Env = append(cmd.Env, fmt.Sprintf("%s=%s", k, v))
+    }
+    output, err := cmd.CombinedOutput()
+    return output, err
+}

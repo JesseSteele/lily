@@ -1,0 +1,14 @@
+[Unit]
+Description=Lily Web Server
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/local/bin/lily -config /etc/lily/master.conf
+Restart=always
+User=www
+Group=www
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

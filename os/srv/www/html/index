@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Example script for /example
+echo "Content-type: text/html"
+echo ""
+
+# Process GET or POST
+if [ "$REQUEST_METHOD" = "GET" ]; then
+    echo "Hello, GET request!"
+elif [ "$REQUEST_METHOD" = "POST" ]; then
+    echo "Hello, POST request!"
+    echo "Data: $CONTENT_LENGTH bytes"
+fi
